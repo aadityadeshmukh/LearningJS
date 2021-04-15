@@ -22,3 +22,14 @@ let para1 = document.createElement("p");
 para1.textContent = finalQuote;
 
 section.appendChild(para1);
+
+let quote = "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+let substring = "green eggs and ham";
+let lenquote = quote.length;
+console.log(lenquote);
+let index = quote.indexOf(substring);
+console.log(index);
+let omitString = " I do not like them, Sam-I-Am.";
+index = quote.indexOf(omitString);
+finalQuote = quote.substring(0, index);
+para1.textContent = finalQuote;
