@@ -33,3 +33,4 @@ let omitString = " I do not like them, Sam-I-Am.";
 index = quote.indexOf(omitString);
 finalQuote = quote.substring(0, index);
 para1.textContent = finalQuote;
+alert("2" > "12");
