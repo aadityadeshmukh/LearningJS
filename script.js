@@ -12,25 +12,25 @@ console.log("hello!");
 //   alert(`Hello ${name} , nice to see you!`);
 // };
 
-let quoteStart = "Don't judge each day by the harvest you reap ";
-let quoteEnd = "but by the seeds you plant.";
-let finalQuote = quoteStart + quoteEnd;
-// Don't edit the code below here!
-const section = document.querySelector("section");
-console.log("creating para");
-let para1 = document.createElement("p");
-para1.textContent = finalQuote;
+// let quoteStart = "Don't judge each day by the harvest you reap ";
+// let quoteEnd = "but by the seeds you plant.";
+// let finalQuote = quoteStart + quoteEnd;
+// // Don't edit the code below here!
+// const section = document.querySelector("section");
+// console.log("creating para");
+// let para1 = document.createElement("p");
+// para1.textContent = finalQuote;
 
-section.appendChild(para1);
+// section.appendChild(para1);
 
-let quote = "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
-let substring = "green eggs and ham";
-let lenquote = quote.length;
-console.log(lenquote);
-let index = quote.indexOf(substring);
-console.log(index);
-let omitString = " I do not like them, Sam-I-Am.";
-index = quote.indexOf(omitString);
-finalQuote = quote.substring(0, index);
-para1.textContent = finalQuote;
-alert(1 && null && 1);
+// let quote = "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+// let substring = "green eggs and ham";
+// let lenquote = quote.length;
+// console.log(lenquote);
+// let index = quote.indexOf(substring);
+// console.log(index);
+// let omitString = " I do not like them, Sam-I-Am.";
+// index = quote.indexOf(omitString);
+// finalQuote = quote.substring(0, index);
+// para1.textContent = finalQuote;
+// alert(1 && null && 1);
