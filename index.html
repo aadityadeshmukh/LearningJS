@@ -3,30 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Function scope example</title>
+  <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <script>
-    let x = 1;
-
-    function a() {
-      let y = 2;
-      output(y);
-    }
-
-    function b() {
-      let z = 3;
-      output(z);
-    }
-
-    function output(value) {
-      const para = document.createElement('p');
-      document.body.appendChild(para);
-      para.textContent = 'Value: ' + value;
-    }
-  </script>
+  <input class="numberInput" type="text">
+  <p></p>
 </body>
 
 </html>
