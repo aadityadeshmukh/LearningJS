@@ -1,26 +1,32 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <script src="script.js" defer></script>
-  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <meta charset="utf-8">
+  <title>Function scope example</title>
 </head>
 
 <body>
-  <!-- <h1>Hello there!</h1>
-  <a href="/me.html">My other page</a>
-  <p id="demo">Blue</p> -->
-  <button>Press Me</button>
-  <section class="preview">
 
+  <script>
+    let x = 1;
 
+    function a() {
+      let y = 2;
+      output(y);
+    }
 
-  </section>
-  <!-- <script>
-    let one = 'Hello!';
-    let two = 'How are you?';
-    document.getElementById("demo").innerHTML = one + two;
-  </script> -->
+    function b() {
+      let z = 3;
+      output(z);
+    }
+
+    function output(value) {
+      const para = document.createElement('p');
+      document.body.appendChild(para);
+      para.textContent = 'Value: ' + value;
+    }
+  </script>
 </body>
 
 </html>
