@@ -1,39 +1,22 @@
-const input = document.querySelector(".numberInput");
-const para = document.querySelector("p");
-
-function squared(num) {
-  return num * num;
-}
-
-function cubed(num) {
-  return num * num * num;
-}
-
-function factorial(num) {
-  if (num < 0) return undefined;
-  if (num == 0) return 1;
-
-  let x = num - 1;
-  while (x > 1) {
-    num *= x;
-    x--;
+const base = document.querySelector(".base");
+const power = document.querySelector(".power");
+const answer = document.querySelector(".answer");
+function calcPower(baseNum, powNum) {
+  let calc = 1;
+  for (i = 0; i < powNum; i++) {
+    calc *= baseNum;
   }
-  return num;
+  return calc;
 }
 
-input.onchange = function() {
-  const num = input.value;
-  if (isNaN(num)) para.textContent = "Enter a valid number.";
-  else {
-    para.textContent =
-      num +
-      " squared is " +
-      squared(num) +
-      " " +
-      " cubed is " +
-      cubed(num) +
-      " " +
-      " factorial is " +
-      factorial(num);
-  }
+base.onchange = function() {
+  const b = base.value;
+  const p = power.value;
+  answer.textContent = calcPower(b, p);
+};
+
+power.onchange = function() {
+  const b = base.value;
+  const p = power.value;
+  answer.textContent = calcPower(b, p);
 };
