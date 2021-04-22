@@ -1,4 +1,5 @@
-console.log("Hello!");
+//A rock paper scissors game
+//Mostly a console game as of now
 function computerPlay() {
   //Get a random number from 1-3
   let randomSel = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
