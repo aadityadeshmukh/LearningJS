@@ -1,5 +1,4 @@
-let pElem = document.createElement("p");
-pElem.textContent = "Blue";
-document.body.appendChild(pElem);
-pElem.style.color = "white";
-pElem.style.cssText = "color : white ; background: black";
+let para = document.createElement("p");
+para.textContent = "I am red";
+document.body.append(para);
+para.style.color = "red";
