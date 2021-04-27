@@ -21,3 +21,9 @@ containerDiv.appendChild(head1);
 let childPara = document.createElement("p");
 childPara.textContent = "Me too!";
 containerDiv.appendChild(childPara);
+
+//Events
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", () => {
+  alert("Hello!");
+});
