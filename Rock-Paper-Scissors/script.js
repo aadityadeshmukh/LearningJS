@@ -18,7 +18,7 @@ function playRound(player, computer) {
   //Check cases. Total 9 cases. 3 are draws.
   //Computer and Player win for 3 cases each
   if (strPlayer == strComp) {
-    return "draw";
+    return "Match Drawn";
   } else {
     if (strPlayer === "rock") {
       if (strComp === "paper") return "You lose!";
@@ -34,12 +34,42 @@ function playRound(player, computer) {
     }
   }
 }
-//Activate an input field when play button is clicked and continue play
-let playbtn = document.getElementById("play");
-playbtn.onclick = function() {
-  let playerSel = prompt("Enter choice");
-  console.log(playerSel);
-  let compSel = computerPlay();
-  console.log(compSel);
-  console.log(playRound(playerSel, compSel));
-};
+//   //Activate an input field when play button is clicked and continue play
+//   let playbtn = document.getElementById("play");
+//   playbtn.onclick = function() {
+//     let playerSel = prompt("Enter choice");
+//     console.log(playerSel);
+//     let compSel = computerPlay();
+//     console.log(compSel);
+//     console.log(playRound(playerSel, compSel));
+//   };
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    let selID = button.id;
+    console.log(`Selection: ${selID}`);
+    let playaPara = document.getElementById("PlayerPara");
+    let origPlayaText = playaPara.textContent;
+    if (origPlayaText != "Player Selection: ") {
+      origPlayaText = origPlayaText.slice(0, 18);
+    }
+    playaPara.textContent = origPlayaText + selID;
+
+    let compSel = computerPlay();
+    let compPara = document.getElementById("ComputerPara");
+    let origCompText = compPara.textContent;
+    if (origCompText != "Computer Selection: ") {
+      origCompText = origCompText.slice(0, 20);
+    }
+    compPara.textContent = origCompText + compSel;
+
+    let result = playRound(selID, compSel);
+    let resPara = document.getElementById("Result");
+    let origResText = resPara.textContent;
+    if (origResText != "Result: ") {
+      origResText = origResText.slice(0, 8);
+    }
+    resPara.textContent = origResText + result;
+  });
+});

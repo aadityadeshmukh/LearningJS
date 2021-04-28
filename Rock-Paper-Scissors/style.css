@@ -1,0 +1,17 @@
+#play {
+  display: block;
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  margin-top: 5px;
+  border-style: none;
+}
+.PSel {
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  margin-bottom: 5px;
+  border-style: none;
+}
