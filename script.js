@@ -1,6 +1,6 @@
-const base = document.querySelector(".base");
-const power = document.querySelector(".power");
-const answer = document.querySelector(".answer");
+const base = document.querySelector('.base');
+const power = document.querySelector('.power');
+const answer = document.querySelector('.answer');
 function calcPower(baseNum, powNum) {
   let calc = 1;
   for (i = 0; i < powNum; i++) {
@@ -22,27 +22,32 @@ power.onchange = function() {
 };
 
 const reverseString = function(str) {
-  let strFinal = "";
-  let idxSpace = str.indexOf(" ");
+  let strFinal = '';
+  let idxSpace = str.indexOf(' ');
   if (idxSpace > -1) {
-    let arrStr = str.split(" ");
+    let arrStr = str.split(' ');
     for (i = arrStr.length; i > 0; --i) {
       console.log(i);
       strFinal += reverSingleWord(arrStr[i - 1]);
-      console.log("final str " + strFinal);
+      console.log('final str ' + strFinal);
     }
   } else strFinal = reverSingleWord(str);
 
   return strFinal;
 };
 function reverSingleWord(str) {
-  console.log("RSW: " + str);
-  let arrStr = str.split("");
-  let returnStr = "";
+  console.log('RSW: ' + str);
+  let arrStr = str.split('');
+  let returnStr = '';
   for (i = arrStr.length - 1; i >= 0; i--) {
     returnStr += arrStr[i];
   }
-  console.log("RSW: " + returnStr);
+  console.log('RSW: ' + returnStr);
   return returnStr;
 }
-reverseString("hello there");
+reverseString('hello there');
+
+let objA = new Object();
+objA = { name: 'Aditya', age: 32 };
+alert(objA.name);
+alert(objA.age);
