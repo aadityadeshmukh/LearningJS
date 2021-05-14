@@ -49,5 +49,5 @@ reverseString('hello there');
 
 let objA = new Object();
 objA = { name: 'Aditya', age: 32 };
-alert(objA.name);
-alert(objA.age);
+console.log(objA.name);
+console.log(objA.age);
