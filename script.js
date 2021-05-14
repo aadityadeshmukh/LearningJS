@@ -51,3 +51,4 @@ let objA = new Object();
 objA = { name: 'Aditya', age: 32 };
 console.log(objA.name);
 console.log(objA.age);
+console.log('name' in objA);
