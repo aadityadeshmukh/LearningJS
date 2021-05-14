@@ -52,3 +52,6 @@ objA = { name: 'Aditya', age: 32 };
 console.log(objA.name);
 console.log(objA.age);
 console.log('name' in objA);
+objA.age = 33;
+console.log(objA.age);
+delete objA.age;
