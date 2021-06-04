@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="hexSel">Select hex value:</label>
+    <input type="text" id="hexSel" name="hexSel">
+    <h1 id="colorname">Color name:</h1>
+    <h2 id="exactmatch">Exact match:</h2>
+    <div id="renderColor" style="width:100px;height:100px;background-color:black"></div>
+    <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
+
+    <script type="text/javascript">
+
+        let hexSel = document.getElementById("hexSel");
+        hexSel.onchange = () => {
+            let color = "";
+            color = hexSel.value;
+            console.log("User selected: " + color);
+            var n_match = ntc.name(color);
+            n_rgb = n_match[0]; // RGB value of closest match
+            n_name = n_match[1]; // Text string: Color name
+            n_exactmatch = n_match[2]; // True if exact color match
+
+            let headerElem = document.getElementById("colorname");
+            console.log(n_match);
+            headerElem.innerHTML = "Color name:" + " " + n_name;
+
+            let exactElem = document.getElementById("exactmatch");
+            console.log(n_exactmatch);
+            exactElem.innerHTML = "Exact match:" + " " + n_exactmatch;
+
+            let renderColorElem = document.getElementById("renderColor");
+            renderColorElem.style.backgroundColor = color;
+        };
+
+    </script>
+</body>
+
+</html>
