@@ -40,3 +40,6 @@ let comment = comments.find(comment => {
 });
 
 console.log({ comment });
+
+let commentIdx = comments.findIndex(comment => comment.id === 823423);
+console.log({ commentIdx });
