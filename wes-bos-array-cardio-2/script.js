@@ -30,3 +30,13 @@ let allAdults = people.every(person => {
   if (currYear - people.year >= 19) return true;
 });
 console.log({ allAdults });
+
+// Array.prototype.find()
+// Find is like filter, but instead returns just the one you are looking for
+// find the comment with the ID of 823423
+
+let comment = comments.find(comment => {
+  if (comment.id === 823423) return true;
+});
+
+console.log({ comment });
