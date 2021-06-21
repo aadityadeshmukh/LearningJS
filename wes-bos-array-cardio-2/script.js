@@ -43,3 +43,6 @@ console.log({ comment });
 
 let commentIdx = comments.findIndex(comment => comment.id === 823423);
 console.log({ commentIdx });
+
+    comments.splice(commentIdx, 1);
+    console.table(comments);
