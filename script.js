@@ -55,3 +55,12 @@ console.log('name' in objA);
 objA.age = 33;
 console.log(objA.age);
 delete objA.age;
+
+let myObj = new Object();
+let myObj2 = {};
+console.log({ myObj });
+console.log({ myObj2 });
+
+function Account() {}
+let newAccount = new Account();
+console.log({ newAccount });
