@@ -64,3 +64,24 @@ console.log({ myObj2 });
 function Account() {}
 let newAccount = new Account();
 console.log({ newAccount });
+
+function Plant() {
+  this.country = 'Mexico';
+  this.isOrganic = true;
+}
+Plant.prototype.ShowNameAndColor = function() {
+  console.log('I am a ' + this.name + ' and my color is ' + this.color);
+};
+
+function Fruit(fName, fColor) {
+  this.name = fName;
+  this.color = fColor;
+}
+
+Fruit.prototype = new Plant();
+let ban = new Fruit('Banana', 'Yellow');
+console.log({ ban });
+console.log(ban.name);
+console.log(ban.color);
+console.log(ban.country);
+ban.ShowNameAndColor()
