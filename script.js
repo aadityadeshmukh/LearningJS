@@ -84,4 +84,21 @@ console.log({ ban });
 console.log(ban.name);
 console.log(ban.color);
 console.log(ban.country);
-ban.ShowNameAndColor()
+ban.ShowNameAndColor();
+
+function Student() {}
+
+Student.prototype.SayName = function() {
+  console.log(this.name);
+};
+
+function EighthGrader(name) {
+  this.name = name;
+  this.grade = '8';
+}
+
+EighthGrader.prototype = Object.create(Student.prototype);
+let carl = new EighthGrader('Carl');
+carl.SayName();
+console.log({ carl });
+console.log(carl.grade);
