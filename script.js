@@ -102,3 +102,11 @@ let carl = new EighthGrader('Carl');
 carl.SayName();
 console.log({ carl });
 console.log(carl.grade);
+
+//factory pattern vs constructor pattern
+const personFactory = (name, age) => {
+  return { name, age };
+};
+
+let jeff = personFactory('Jefferson', '33');
+console.log(jeff.name);
