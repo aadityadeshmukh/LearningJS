@@ -105,8 +105,12 @@ console.log(carl.grade);
 
 //factory pattern vs constructor pattern
 const personFactory = (name, age) => {
-  return { name, age };
+  const sayHi = () => {
+    console.log('Hola!');
+  };
+  return { name, age, sayHi };
 };
 
 let jeff = personFactory('Jefferson', '33');
 console.log(jeff.name);
+jeff.sayHi();
