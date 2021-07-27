@@ -114,3 +114,10 @@ const personFactory = (name, age) => {
 let jeff = personFactory('Jefferson', '33');
 console.log(jeff.name);
 jeff.sayHi();
+
+//object notation
+// if the object name and the variable it refers to are exactly the same you can use the new condensed obj notation
+let nom = 'Blah';
+let bah = 'Blue';
+console.log(nom, bah);
+console.log({nom, bah})
