@@ -120,4 +120,4 @@ jeff.sayHi();
 let nom = 'Blah';
 let bah = 'Blue';
 console.log(nom, bah);
-console.log({nom, bah})
+console.log({nom, bah});
