@@ -124,7 +124,7 @@ console.log({ nom, bah });
 
 let a = 17;
 const func = x => {
-  let a = x;
+  a = x;
 };
 
 func(99);
