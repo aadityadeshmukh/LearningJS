@@ -129,3 +129,14 @@ const func = x => {
 func(99);
 console.log(a);
 console.log(window.a === a);
+
+const FactoryFunction = string => {
+  const capitalizeString = () => string.toUpperCase();
+  const printString = () => console.log(`------${capitalizeString()}-----`);
+  return { printString };
+};
+
+let taco = FactoryFunction('Taco!');
+taco.printString();
+printString();
+
