@@ -55,3 +55,5 @@ const Calculator = (() => {
 })();
 console.log(Calculator.add(3, 6));
 console.log(Calculator.mult(3, 6));
+console.log(Calculator.sub(5500, 4432));
+console.log(Calculator.div(5500, 5));
